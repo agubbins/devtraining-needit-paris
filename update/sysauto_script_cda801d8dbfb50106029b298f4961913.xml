@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 08:00:00</entered_time>
+        <name>AGS NeedIt: Tareas atrasadas</name>
+        <offset/>
+        <offset_type/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2020-10-07 17:00:55</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var ahora = new GlideDateTime();
+
+var tareas_atrasadas = new GlideRecord('x_58872_needit_needit_task');
+tareas_atrasadas.addQuery('due_date','<=',ahora); // Tareas atrasadas en su fecha de compromiso (due date)
+tareas_atrasadas.addQuery('state','!=',3); // Tareas que no estén el trabajo completado.
+tareas_atrasadas.query();
+
+while (tareas_atrasadas.next()) {
+	// gs.info('Tarea atrasada número = ' + tareas_atrasadas.getValue('number'));
+	gs.info('Tarea atrasada número = ' + tareas_atrasadas.number);
+	
+	// Llamamos a nuestro evento registrado "overdueNeedItask", le pasamos cada tarea atrasada
+	gs.eventQueue('x_58872_needit.overdueNeedItTask', tareas_atrasadas, tareas_atrasadas.number,gs.getUserName());
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-07 17:08:29</sys_created_on>
+        <sys_id>cda801d8dbfb50106029b298f4961913</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>AGS NeedIt: Tareas atrasadas</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sysauto_script_cda801d8dbfb50106029b298f4961913</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-09 13:24:52</sys_updated_on>
+        <time_zone>floating</time_zone>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
