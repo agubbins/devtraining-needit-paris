@@ -74,8 +74,8 @@
         <others>true</others>
         <page_hdrftr/>
         <pivot_expanded>true</pivot_expanded>
-        <report_drilldown display_value="Monthly Active Requests by Requested for">5016e4dddb1020106029b298f49619d7</report_drilldown>
-        <report_source display_value="Active NeedIt Requests (NeedIt)">c89d7c49db5020106029b298f49619cc</report_source>
+        <report_drilldown/>
+        <report_source/>
         <roles/>
         <row/>
         <sc_groupby_item_id/>
@@ -96,24 +96,24 @@
         <show_legend_border>false</show_legend_border>
         <show_marker>false</show_marker>
         <show_zero>false</show_zero>
-        <source_type>source</source_type>
+        <source_type>table</source_type>
         <start_time/>
         <style_config/>
         <sumfield/>
         <sys_class_name>sys_report</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-11-03 19:49:26</sys_created_on>
-        <sys_id>f8223081db5020106029b298f4961968</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_name>Active NeedIt Requests by Type</sys_name>
+        <sys_created_on>2020-11-04 13:35:43</sys_created_on>
+        <sys_id>4836e8dddb1020106029b298f49619e5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>NeedIt Requests by Type</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sys_report_f8223081db5020106029b298f4961968</sys_update_name>
+        <sys_update_name>sys_report_4836e8dddb1020106029b298f49619e5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-11-04 13:35:11</sys_updated_on>
+        <sys_updated_on>2020-11-04 13:36:28</sys_updated_on>
         <table>x_58872_needit_needit</table>
-        <title>Active NeedIt Requests by Type</title>
+        <title>NeedIt Requests by Type</title>
         <title_horizontal_alignment>left</title_horizontal_alignment>
         <title_vertical_alignment>top</title_vertical_alignment>
         <to/>
